@@ -12,10 +12,10 @@ Contratacion::Contratacion() {
 	this->costo=0;
 	this->empresa="";
 	this->fecha;
-	this->tipo_servicio="";
+	this->tipo_servicio=salud;
 }
 //constructor sobrecargado
-Contratacion::Contratacion(string empresa, string tipo_servicio,short dia,short mes,short anio, float costo){
+Contratacion::Contratacion(string empresa, TipoServicio tipo_servicio,short dia,short mes,short anio, float costo){
 	this->empresa=empresa;
 	this->tipo_servicio=tipo_servicio;
 	this->costo=costo;
@@ -28,6 +28,7 @@ Contratacion::Contratacion(Contratacion &copia){
 	this->tipo_servicio=copia.tipo_servicio;
 	this->fecha=copia.fecha;
 }
+
 //destructor
 Contratacion::~Contratacion() {
 	// TODO Auto-generated destructor stub

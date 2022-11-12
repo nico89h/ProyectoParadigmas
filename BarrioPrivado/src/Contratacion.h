@@ -10,15 +10,26 @@
 #include "Fecha.h"
 #include <iostream>
 using namespace std;
+enum TipoServicio{
+	seguridad,
+	recoleccionBasura,
+	transporte,
+	limpiezaDomestica,
+	plomeria,
+	electricidad,
+	mecanica,
+	salud,
+	entretenimiento
+};
 class Contratacion {
 //inicio de la clase contratacion
 private:
 	string empresa;
-	string tipo_servicio;
+	TipoServicio tipo_servicio;
 	Fecha fecha;
 	float costo;
 public:
-	Contratacion(string empresa, string tipo_servicio,short dia,short mes,short anio, float costo);
+	Contratacion(string empresa,TipoServicio tipo_servicio,short dia,short mes,short anio, float costo);
 	Contratacion();
 	Contratacion(Contratacion &copia);
 	virtual ~Contratacion();
